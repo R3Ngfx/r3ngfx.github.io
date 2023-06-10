@@ -1,0 +1,82 @@
+body { background-color: #FFFFFF;}
+::selection { background-color:#FFC100; color:#000; text-decoration:none }
+
+@font-face { font-family: TexGyreHeros; src: url('fonts/TeX_Gyre_Heros/texgyreheros-regular.otf'); }
+@font-face { font-family: TexGyreHeros; font-weight: bold; src: url('fonts/TeX_Gyre_Heros/texgyreheros-bold.otf'); }
+
+* {
+	border: solid red 1px;
+}
+
+body {
+	width: 100vw;
+	margin: 0;
+}
+
+.sidebar {
+		font-family: TexGyreHeros, sans-serif;
+		width: 100px;
+		position: fixed;
+		z-index: 1;
+		overflow-x: hidden;
+		color: #000000;
+		text-color: #FFFFFF;
+		padding: 20px 20px;
+		margin: 0;
+		background-color: #FFFFFF;
+}
+.sidebar a { color: #000000; text-decoration:none }
+.sidebar a:hover { background-color:#FFC100; color:#000; text-decoration:none }
+/*
+.sidebar a:before{content:"«"}
+.sidebar a:after{content:"»"}
+*/
+
+.main {
+		font-family: TexGyreHeros, sans-serif;
+		width: 100%;
+		margin-top: 20px;
+		margin-left: 0px;
+		color: #000000;
+		padding: 0px 205px;
+}
+.main a { color: #000000; font-weight:bold; text-decoration:none }
+.main a:hover { background-color:#FFC100; color:#000 }
+.main a:before{content:"«"}
+.main a:after{content:"»"}
+
+table {
+	border-collapse: collapse;
+}
+td, th {
+	border: 1px solid #000000;
+	text-align: center;
+	padding: 8px;
+}
+.square {
+	height: 50px;
+	width: 50px;
+	background-color: #555;
+}
+
+h2:before {
+	width: 0.75em;
+	height: 0.75em;
+	margin-right: 0.3em;
+	content: "";
+	display: inline-block;
+	background: #000000;
+}
+
+h1 {
+	padding-bottom: 0px;
+	margin-bottom: 8px;
+	border-bottom: solid 4px #000000;
+}
+
+
+h2 {
+	padding-bottom: 0px;
+	margin-bottom: 8px;
+	border-bottom: solid 4px #000000;
+}

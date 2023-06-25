@@ -232,4 +232,9 @@ h2 {
 		text-align: right;
 	}
 
+	.footer{
+		width: auto;
+		border-top: solid 4px #000000; ;
+	}
+
 /* MAIN DIVS */

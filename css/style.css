@@ -49,6 +49,10 @@ a{
     margin: 0.5vw;
 }
 
+.text-align-right{
+
+}
+
 
 /* GENERIC CLASES */
 
@@ -100,6 +104,13 @@ h2 {
 	margin-left: auto;
 	margin-right: auto;
 	width: 80%;
+}
+
+.right-img {
+	display: block;
+    float: right;
+    width: 100%;
+    margin-top: 20px;
 }
 
 /* MAIN DIVS */
@@ -206,5 +217,19 @@ h2 {
 	}
 
 	/* SIDE BAR */
+
+	.text-left-wrapper{
+		width: 65%;
+		padding-right: 50px;
+	}
+
+	.image-right-wrapper{
+		width: 35%;
+	}
+
+	.img-shout-out{
+		width: 100%;
+		text-align: right;
+	}
 
 /* MAIN DIVS */

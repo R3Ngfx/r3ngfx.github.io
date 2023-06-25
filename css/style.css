@@ -24,6 +24,11 @@ a{
 	display: flex;
 }
 
+.space-between{
+	justify-content: space-between;
+}
+
+
 .black-bg{
     background-color: rgba( 0, 0, 0, 0.6);
 }
@@ -137,6 +142,10 @@ h2 {
 
 	.content-row{
 		margin: 25px 0 0 0;
+	}
+
+	.content-row > ul > li{
+		margin: 1rem;
 	}
 
 	/* SIDE CONTENT */

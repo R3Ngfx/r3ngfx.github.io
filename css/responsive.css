@@ -1,0 +1,102 @@
+
+/* Small Mobiles */
+
+@media only screen and (min-width: 240px) and (max-width: 320px) {
+
+}
+/* Mediam Mobiles */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+
+	
+}
+
+@media (max-width: 767px) {
+
+
+}
+
+@media (max-width: 992px) {
+
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+
+
+}
+
+@media (max-width: 992px) {
+
+
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1025px) {
+
+
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+
+    .main-sidebar{
+		width: 175px;
+	}
+
+    .main {
+		width: 65%;
+	}
+
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1444px) {
+
+    .main-sidebar{
+		width: 200px;
+	}
+
+    .main {
+		width: 60%;
+	}
+
+}
+
+@media only screen and (min-width: 1444px) and (max-width: 1650px) {
+
+    .main-sidebar{
+		width: 225px;
+	}
+
+    .main {
+		width: 65%;
+	}
+	
+}
+
+@media only screen and (min-width: 1650px) and (max-width: 1700px) {
+
+    .main-sidebar{
+		width: 225px;
+	}
+	
+}
+
+@media only screen and (min-width: 1444px) {
+
+	
+
+}
+
+@media only screen and (max-width: 1650px) {
+	
+}
+
+
+
+
+
+
+

@@ -1,10 +1,10 @@
 body { background-color: #FFFFFF;}
 ::selection { background-color:#FFC100; color:#000; text-decoration:none }
 
-@font-face { font-family: TexGyreHeros; src: url('fonts/TeX_Gyre_Heros/texgyreheros-regular.otf'); }
-@font-face { font-family: TexGyreHeros; font-weight: bold; src: url('fonts/TeX_Gyre_Heros/texgyreheros-bold.otf'); }
+@font-face { font-family: TexGyreHeros; src: url('../fonts/TeX_Gyre_Heros/texgyreheros-regular.otf'); }
+@font-face { font-family: TexGyreHeros; font-weight: bold; src: url('../fonts/TeX_Gyre_Heros/texgyreheros-bold.otf'); }
 
-@font-face { font-family: Gemsbuck; src: url('fonts/Gemsbuck/Gemsbuck-bold.ttf'); }
+@font-face { font-family: Gemsbuck; src: url('../fonts/Gemsbuck/Gemsbuck-bold.ttf'); }
 
 
 
@@ -126,11 +126,12 @@ h2 {
 		background-color: #000000;
 		font-size: 30px;
 		color: #FFFFFF;
-		padding: 12px 12px 0px 14px;
+		padding: 12px 12px 2px 15px;
 		font-family: Gemsbuck, sans-serif;
 		margin: 0;
 		text-align: inherit;
 		width: fit-content;
+		border-bottom: none;
 		
 	}
 
@@ -163,7 +164,7 @@ h2 {
 		z-index: 1;
 		overflow-x: hidden;
 		color: #000000;
-		margin-top: 10px;
+		/* margin-top: 10px; */
 		/* background-color: #FFFFFF; */
 		/* padding: 20px 20px; */
 		/* position: fixed; */

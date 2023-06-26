@@ -141,6 +141,9 @@ h2 {
 	.main a:before{content:"«"}
 	.main a:after{content:"»"}
 
+	.silent-link a:before{content:""}
+	.silent-link a:after{content:""}
+
 	.content-title{
 		margin: 25px 0 0 0;
 	}

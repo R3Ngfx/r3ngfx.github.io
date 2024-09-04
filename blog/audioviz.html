@@ -3,9 +3,10 @@
 
 	<head>
 
+		<title>Audio Visualization</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
-		<title>Audio Visualization</title>
+		<link rel="stylesheet" type="text/css" href="css/responsive.css" media="screen"/>
 
 		<link rel="stylesheet" href="../katex/katex.min.css">
 		<script defer src="../katex/katex.min.js"></script>
@@ -24,103 +25,132 @@
 			});
 		</script>
 
+		<link rel="stylesheet" href="../highlight/styles/mono-blue.min.css">
+		<script src="../highlight/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
+
 	</head>
 
 	<body>
 
-		<div class="sidebar">
-			<a href ="../index.html"><u>R3N</u></a>
-			<br><br>
-			<a href="../about.html">«About»</a>
-			<br>
-			<a href="../works.html">«Works»</a>
-			<br>
-			<a href="../blog.html">«Blog»</a>
+		<div class="main-wrapper">
+
+<!-- navigation start -->
+			<div class="main-sidebar">
+				<div class="sidebar-menu">
+					<div class="logo" onclick="location.href='/';"> R3N </div>
+					<ul>
+						<li> <a href="/about.html"> About </a> </li>
+						<li> <a href="/works.html"> Works </a> </li>
+						<li> <a href="/blog.html"> Blog </a> </li>
+					</ul>
+				</div>
+				
+			</div>
+<!-- navigation end -->
+
+			<div class="main-content">
+				<div class="main">
+
+					<div class="content-title">
+						<h1>Audio Sampling and Visualization</h1>
+					</div>
+
+					<div class="content-row">
+
+						<p>[TODO: Short introduction to the concept of audio visualization and why you should do it]</p>
+
+						<h2>Audio Spectrum</h2>
+						<p>The audible frequency range for humans is between 20Hz and 20KHz, which can be separated into seven main frequency bands:</p>
+						
+						<table class="centered">
+							<tr>
+								<th>Frequency Range (Hz)</th>
+								<th>Name</th>
+							</tr>
+							<tr>
+								<td>20 - 60</td>
+								<td>Sub Bass</td>
+							</tr>
+							<tr>
+								<td>60 - 250</td>
+								<td>Bass</td>
+							</tr>
+							<tr>
+								<td>250 - 500</td>
+								<td>Low Midrange</td>
+							</tr>
+							<tr>
+								<td>500 - 2000</td>
+								<td>Midrange</td>
+							<tr>
+								<td>2000 - 4000</td>
+								<td>Upper Midrange</td>
+							</tr>
+							<tr>
+								<td>4000 - 6000</td>
+								<td>Presence</td>
+							</tr>
+							<tr>
+								<td>6000 - 20000</td>
+								<td>Brilliance</td>
+							</tr>
+							</tr>
+						</table>
+
+						<p>This can be simplified even further to three bands:</p>
+						<table class="centered">
+							<tr>
+								<th>Frequency Range (Hz)</th>
+								<th>Name</th>
+							</tr>
+							<tr>
+								<td>20 - 250</td>
+								<td>Lows</td>
+							</tr>
+							<tr>
+								<td>250 - 2000	</td>
+								<td>Mids</td>
+							</tr>
+							<tr>
+								<td>2000 - 20000</td>
+								<td>Highs</td>
+							</tr>
+						</table>
+
+						<h2>Audio Sampling</h2>
+						</p>Typicall sampling rates for audio are 44.1KHz, 48KHz, 88.2KHz and 96KHz.</p>
+
+						<p>The Audio Engineering Society recommends 48kHz sampling rate for most applications, which would give us a frequency range of 24KHz according to the Nyquist-Shannon sampling theorem. But this might be too much since the heighest we need is 20KHz, so we would be computing many wasted unused samples.</p>
+
+						<h2>Fast Fourier Transform</h2>
+						<p>The Fast Fourier Transform <b>FFT</b> is []</p>
+
+
+						<h2>Windowing Functions</h2>
+						<p>The FFT works very well when the signal is periodically adjusted to the window, but this doesn't happen with the audio data we are sampling since there can be any number of signals with different frequencies at the same time, and there exists no window size that would perfectly match all possible frequencies all the time. To combat this spectral leakage, we can apply a windowing function to the sampled data, to reduce the value at the edges of the window.</p>
+
+						<p>There are <a href="https://en.wikipedia.org/wiki/Window_function#A_list_of_window_functions">many</a> window functions [], for audio visualization I've found that the best [] is usualy the Hann window function:</p>
+
+						<p>$$w[n] = 0.5 \cdot \left( 1 - \cos \left(\frac{2\pi n}{N}\right) \right)$$</p>
+
+						<h2>Normalizing Sampled Data</h2>
+						<p>For audio visualization we want the range of the values to be between 0 and 1, but the sampled data is not in that range. The sampled data's range is unknown since it depends on the hardware and driver configuration. Plus, even if we were able to know the max value of the audio device we're sampling from, it's possible that the audio has been mixed to a lower volume so that max is never achieved. In short, it's impossible to predict how 'loud' the sounds we're sampling is going to be.</p>
+
+						<h2>Code test</h2>
+						<p>Some text:</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main() {
+	printf("So cool!\n");
+	return 0;
+}</code></pre>
+						</div>
+
+				</div>
+
+			</div>
 		</div>
-
-	<div class="main">
-
-		<h1>Audio Sampling and Visualization</h1>
-		<p>[TODO: Short introduction to the concept of audio visualization and why you should do it]</p>
-
-		<h2>Audio Spectrum</h2>
-		<p>The audible frequency range for humans is between 20Hz and 20KHz, which can be separated into seven main frequency bands:</p>
-		
-		<table>
-			<tr>
-				<th>Frequency Range (Hz)</th>
-				<th>Name</th>
-			</tr>
-			<tr>
-				<td>20 - 60</td>
-				<td>Sub Bass</td>
-			</tr>
-			<tr>
-				<td>60 - 250</td>
-				<td>Bass</td>
-			</tr>
-			<tr>
-				<td>250 - 500</td>
-				<td>Low Midrange</td>
-			</tr>
-			<tr>
-				<td>500 - 2000</td>
-				<td>Midrange</td>
-			<tr>
-				<td>2000 - 4000</td>
-				<td>Upper Midrange</td>
-			</tr>
-			<tr>
-				<td>4000 - 6000</td>
-				<td>Presence</td>
-			</tr>
-			<tr>
-				<td>6000 - 20000</td>
-				<td>Brilliance</td>
-			</tr>
-			</tr>
-		</table>
-
-		<p>This can be simplified even further to three bands:</p>
-		<table>
-			<tr>
-				<th>Frequency Range (Hz)</th>
-				<th>Name</th>
-			</tr>
-			<tr>
-				<td>20 - 250</td>
-				<td>Lows</td>
-			</tr>
-			<tr>
-				<td>250 - 2000	</td>
-				<td>Mids</td>
-			</tr>
-			<tr>
-				<td>2000 - 20000</td>
-				<td>Highs</td>
-			</tr>
-		</table>
-
-		<h2>Audio Sampling</h2>
-		</p>Typicall sampling rates for audio are 44.1KHz, 48KHz, 88.2KHz and 96KHz.</p>
-
-		<p>The Audio Engineering Society recommends 48kHz sampling rate for most applications, which would give us a frequency range of 24KHz according to the Nyquist-Shannon sampling theorem. But this might be too much since the heighest we need is 20KHz, so we would be computing many wasted unused samples.</p>
-
-		<h2>Fast Fourier Transform</h2>
-		<p>The Fast Fourier Transform <b>FFT</b> is []</p>
-
-
-		<h2>Windowing Functions</h2>
-		<p>The FFT works very well when the signal is periodically adjusted to the window, but this doesn't happen with the audio data we are sampling since there can be any number of signals with different frequencies at the same time, and there exists no window size that would perfectly match all possible frequencies all the time. To combat this spectral leakage, we can apply a windowing function to the sampled data, to reduce the value at the edges of the window.</p>
-
-		<p>There are <a href="https://en.wikipedia.org/wiki/Window_function#A_list_of_window_functions">many</a> window functions [], for audio visualization I've found that the best [] is usualy the Hann window function:</p>
-
-		<p>$$w[n] = 0.5 \cdot \left( 1 - \cos \left(\frac{2\pi n}{N}\right) \right)$$</p>
-
-		<h2>Normalizing Sampled Data</h2>
-		<p>For audio visualization we want the range of the values to be between 0 and 1, but the sampled data is not in that range. The sampled data's range is unknown since it depends on the hardware and driver configuration. Plus, even if we were able to know the max value of the audio device we're sampling from, it's possible that the audio has been mixed to a lower volume so that max is never achieved. In short, it's impossible to predict how 'loud' the sounds we're sampling is going to be.</p>
-
-	</div>
 
 	</body>
 </html>

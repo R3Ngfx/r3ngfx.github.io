@@ -4,7 +4,7 @@ body { background-color: #FFFFFF;}
 @font-face { font-family: TexGyreHeros; src: url('../fonts/TeX_Gyre_Heros/texgyreheros-regular.otf'); }
 @font-face { font-family: TexGyreHeros; font-weight: bold; src: url('../fonts/TeX_Gyre_Heros/texgyreheros-bold.otf'); }
 
-@font-face { font-family: Gemsbuck; src: url('../fonts/Gemsbuck/Gemsbuck-bold.ttf'); }
+@font-face { font-family: Orbitron; src: url('../fonts/Orbitron/Orbitron-Black.ttf'); }
 
 /* GENERIC CLASES */
 
@@ -25,7 +25,6 @@ a{
 .space-between{
 	justify-content: space-between;
 }
-
 
 .black-bg{
 	background-color: rgba( 0, 0, 0, 0.6);
@@ -170,17 +169,32 @@ h1:before {
 	font-size: 58px;
 	color: black;
 	padding: 0px;
-	font-family: Gemsbuck, sans-serif;
+	font-family: Orbitron, sans-serif;
 	margin: 0;
-	margin-top: -5px;
+	margin-top: -16px;
 	width: fit-content;
 	border-bottom: none;
+	text-transform: uppercase;
+}
+
+.date {
+	font-size: 22px;
+	color: #AAAAAA;
+	font-weight: bold;
+	text-align: left;
+	margin-right: 20px;
+	margin-bottom: 0px;
+	margin-top: 0px;
 }
 
 .content-row{
 	margin: 0;
 	padding-right: 10px;
 	overflow: auto;
+}
+
+.content-row p{
+	text-align: justify;
 }
 
 .italic{
@@ -201,8 +215,8 @@ h1:before {
 	background-color: #000000;
 	font-size: 28px;
 	color: #FFFFFF;
-	padding: 10px 4px 4px 14px;
-	font-family: Gemsbuck, sans-serif;
+	padding: 5px 4px 5px 14px;
+	font-family: Orbitron, sans-serif;
 	margin: 0;
 	text-align: inherit;
 	cursor: pointer;

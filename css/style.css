@@ -6,18 +6,6 @@ body { background-color: #FFFFFF;}
 
 @font-face { font-family: Orbitron; src: url('../fonts/Orbitron/Orbitron-Black.ttf'); }
 
-/* GENERIC CLASES */
-
-* {
-	/* margin: 0; */
-	/* padding: 0; */
-	/* cursor: crosshair; */
-}
-
-a{
-	/* cursor: cell; */
-}
-
 .display-flex{
 	display: flex;
 }
@@ -26,51 +14,41 @@ a{
 	justify-content: space-between;
 }
 
-.black-bg{
-	background-color: rgba( 0, 0, 0, 0.6);
-}
-
-.margin-top-10{
-	margin-top: 10px;
-}
-
-.margin-left-5{
-	margin-left: 0.5vw;
-}
-
-.margin-right-5{
-	margin-right: 0.5vw;
-}
-
-.basic-margin{
-	margin: 0.5vw;
-}
-
-.text-align-right{
-
-}
-
-
-/* GENERIC CLASES */
-
 body {
 	width: 100vw;
 	margin: 0;
+	padding: 0;
+	height: max-content;
 	overflow-x: hidden;
 }
 
 table {
 	border-collapse: collapse;
 }
+
 td, th {
 	border: 1px solid #000000;
 	text-align: center;
 	padding: 8px;
 }
-.square {
-	height: 50px;
-	width: 50px;
-	background-color: #555;
+
+h1:before {
+	width: 0.775em;
+	height: 0.75em;
+	margin-right: 0.3em;
+	content: "";
+	display: inline-block;
+	background: #000000;
+}
+h1 {
+	background-color: white;
+	font-size: 6vh;
+	color: black;
+	margin: 0 0 0 0;
+	padding: 1vh 0 0 0;
+	font-family: Orbitron, sans-serif;
+	width: fit-content;
+	text-transform: uppercase;
 }
 
 h2:before {
@@ -81,19 +59,11 @@ h2:before {
 	display: inline-block;
 	background: #000000;
 }
-
-h1 {
-	margin-top: 0;
-	padding-bottom: 0px;
-	margin-bottom: 8px;
-	border-bottom: solid 4px #000000;
-}
-
-
 h2 {
+	font-size: 2.5vh;
 	padding-bottom: 0px;
-	margin-bottom: 8px;
-	border-bottom: solid 4px #000000;
+	margin-bottom: 0.9vh;
+	border-bottom: solid 0.5vh #000000;
 }
 
 .centered-img {
@@ -111,7 +81,7 @@ h2 {
 }
 
 code {
-	border: 2px solid #AAAAAA;
+	border: 0.05vh solid #AAAAAA;
 }
 
 .centered {
@@ -119,103 +89,71 @@ code {
 	margin-right: auto;
 }
 
-/* MAIN DIVS */
-
-.main-wrapper{
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	height: max-content;
-	display: flex;
-}
-
-/* SIDE CONTENT */
-
-.main-content{
-	width: inherit;
-}
-
 .main {
 	font-family: TexGyreHeros, sans-serif;
 	color: #000000;
 	width: 70%;
 	margin: 0 auto;
-	padding-bottom: 100px;
+	padding-bottom: 15vh;
+
+	a { color: #000000; font-weight:bold; text-decoration:none }
+	a:hover { background-color:#FFC100; color:#000 }
+	a:before { content:"«" }
+	a:after { content:"»" }
+
+	p {
+		font-size: 1.75vh;
+		text-align: justify;
+	}
+
+	ul {
+		padding-left: 4vh;
+	}
+
+	li {
+		p {
+			margin: 0 3vh 0 0;
+			text-align: left;
+		}
+	}
+
+	li::marker {
+		font-size: 1.75vh;
+	}
 }
-.main a { color: #000000; font-weight:bold; text-decoration:none }
-.main a:hover { background-color:#FFC100; color:#000 }
-.main a:before{content:"«"}
-.main a:after{content:"»"}
+
+.list-element {
+	display: flex;
+	justify-content: space-between;
+}
 
 .silent-link a:before{content:""}
 .silent-link a:after{content:""}
 
-.content-title{
-	margin: 25px 0 0 0;
-}
+.subtitle {
+	margin-bottom: 4vh;
 
-
-h1:before {
-	width: 0.75em;
-	height: 0.75em;
-	margin-right: 0.3em;
-	content: "";
-	display: inline-block;
-	background: #000000;
-}
-
-.content-title h1{
-	background-color: white;
-	font-size: 58px;
-	color: black;
-	padding: 0px;
-	font-family: Orbitron, sans-serif;
-	margin: 0;
-	margin-top: -16px;
-	width: fit-content;
-	border-bottom: none;
-	text-transform: uppercase;
 }
 
 .date {
-	font-size: 22px;
+	font-size: 2.25vh !important;
 	color: #AAAAAA;
 	font-weight: bold;
-	text-align: left;
-	margin-right: 20px;
-	margin-bottom: 0px;
-	margin-top: 0px;
-}
-
-.content-row{
 	margin: 0;
-	padding-right: 10px;
-	overflow: auto;
-}
-
-.content-row p{
-	text-align: justify;
-}
-
-.italic{
-	font-style: italic;
 }
 
 .italic-right{
-	font-style: italic;
-	text-align: right;
+	font-style: italic !important;
+	text-align: right !important;
 }
 
-/* SIDE CONTENT */
-
-
-/* SIDE BAR */
+/* NAVIGATION BAR */
 
 .logo{
 	background-color: #000000;
-	font-size: 28px;
+	font-size: 2.8vh;
 	color: #FFFFFF;
-	padding: 5px 4px 5px 14px;
+	padding: 0.5vh 0.4vh 0.5vh 1.5vh;
 	font-family: Orbitron, sans-serif;
 	margin: 0;
 	text-align: inherit;
@@ -226,68 +164,58 @@ h1:before {
 	color: #FFC100;
 }
 
-.main-sidebar{
+.left-sidebar{
 	height: 10vw;
 	position: fixed;
-	width: 12.5%;
+	width: 12.5vw;
 	height: 100vh;
 	font-family: TexGyreHeros, sans-serif;
 	z-index: 1;
 	overflow-x: hidden;
 	color: #000000;
-	/* margin-top: 10px; */
-	/* background-color: #FFFFFF; */
-	/* padding: 20px 20px; */
-	/* position: fixed; */
-}
-.main-sidebar a { color: #000000; text-decoration:none }
-.main-sidebar a:hover { background-color:#FFC100; color: #000000; text-decoration:none }
+	margin-top: 2.5vh;
 
-.main-sidebar ul{
-	list-style-type: none;
-	padding-left: 0;
-	margin: 0;
-}
+	a { color: #000000; text-decoration:none }
+	a:hover { background-color:#FFC100; color: #000000; text-decoration:none }
 
-.main-sidebar ul li{
-	font-weight: bold;
-	font-size: 22px;
-	margin-left: 20px;
-	margin: 7px 16px;
+	ul{
+		list-style-type: none;
+		padding-left: 0;
+		margin: 0;
+	}
+
+	ul li{
+		font-weight: bold;
+		font-size: 2.2vh;
+		margin-left: 2.2vh;
+		margin: 0.8vh 1.75vh;
+	}
+
+
 }
 
 .top-sidebar {
 	visibility: hidden;
 	width: 0%;
+	height: 0px;
 	margin: 0 auto;
-	border-bottom: 4px solid black;
-}
-
-.top-navigation {
-	width: 100%;
-	height: 100%;
+	border-bottom: 0px;
+	font-family: TexGyreHeros, sans-serif;
 	display: flex;
-	margin-bottom: 0em;
+
+	a {
+		color: #000000;
+		text-decoration:none;
+		font-weight: bold;
+		font-size: 2.5vh;
+		margin-top: 0.25em;
+		margin-left: 2.5%;
+		margin-right: 2.5%;
+		height: inherit;
+	}
+	a:hover { background-color:#FFC100; color: #000000; text-decoration:none }
 }
 
-.top-navigation a{
-	color: #000000;
-	text-decoration:none;
-	font-weight: bold;
-	font-size: 22px;
-	margin-top: 0.25em;
-	margin-right: 5%;
-	height: inherit;
-}
-
-.top-navigation a { color: #000000; text-decoration:none }
-.top-navigation a:hover { background-color:#FFC100; color: #000000; text-decoration:none }
-
-.sidebar-menu{
-	margin: 25px 0 0 0;
-}
-
-/* SIDE BAR */
 
 .text-left-wrapper{
 	width: 65%;
@@ -315,22 +243,19 @@ h1:before {
 
 /* IMAGE GALLERY */
 
-div.gallery-image {
-	margin: 10px;
-	border: 3px solid #000;
+.gallery-container {
+	margin: 0;
+	overflow: auto;
+}
+
+.gallery-image {
+	margin: 1vh;
+	border: 0.4vh solid #000;
 	float: left;
 	width: 29%;
-	padding: 0px;
-	margin-bottom: 00px;
 }
 
-div.gallery-image:hover {
-	border: 3px solid #000;
-}
-
-div.gallery-image img {
-	outline: 0px solid #000;
-	outline-offset: -0px;
+.gallery-image img {
 	width: 100%;
 	height: auto;
 	filter: grayscale(100%);
@@ -338,26 +263,30 @@ div.gallery-image img {
 }
 
 .gallery-image:hover img {
-	outline: 0px solid #000;
-	outline-offset: -0px;
 	width: 100%;
 	filter: grayscale(0%);
 }
 
-div.gallery-title {
-	border-top: 3px solid #000;
-	text-align: center;
+.gallery-title {
+	border-top: 0.4vh solid #000;
 	font-weight: bold;
-	height: 3em;
+	height: 5vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	overflow-y: auto;
+	overflow: hidden;
+	margin 0;
+
+	p {
+		text-align: center;
+		margin: 0;
+		padding: 0 2vh 0 2vh;
+	}
 }
 
 .gallery-image:hover .gallery-title{
-	border-top: 3px solid #000;
+	border-top: 0.4vh solid #000;
 	background-image: repeating-linear-gradient(-45deg, transparent, transparent 16px, #FFC100 16px, #FFC100 96px);
 
 	background: linear-gradient(45deg,#0000 calc(25%/3), #FFC100 0 calc(50%/3),
@@ -370,14 +299,20 @@ div.gallery-title {
 		#0000 0),linear-gradient(-45deg,#FFC100 calc(25%/3), #0000 0 calc(50%/3),
 		#FFC100 0 25%, #0000 0 75%,
 		#FFC100 0 calc(250%/3), #0000 0 calc(275%/3),#FFC100 0) #FFFFFF;
-	background-size: 256px, 200px;
-	background-position: 0px, 0px, 128px, 100px;
+	background-size: 28vh, 22vh;
+	background-position: 0px, 0px, 14vh, 11vh;
 }
 
 .gallery-desc {
 	position: absolute;
 	visibility: hidden;
-	font-size: 1em;
+	height: 0px;
+
+	p {
+		font-size: 0px;
+		margin 0;
+		height: 0;
+	}
 }
 
 .gallery-image:hover .container .gallery-desc {
@@ -385,18 +320,18 @@ div.gallery-title {
 	bottom: 0px;
 	background: #00000077;
 	width: 100%;
-}
+	font-size: 2vh;
+	height: fit-content;
 
-.gallery-desc p{
-	text-align: justify;
-	vertical-align: text-bottom;
-	margin: 10px;
-	color: white;
-	font-family: TexGyreHeros, sans-serif;
-	font-weight: normal;
-	font-size: 1em;
+	p {
+		text-align: justify;
+		vertical-align: text-bottom;
+		color: white;
+		font-family: TexGyreHeros, sans-serif;
+		font-weight: normal;
+		font-size: 1.5vh;
+	}
 }
-
 
 div.container {
 	position: relative;

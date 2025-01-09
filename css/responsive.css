@@ -1,29 +1,34 @@
 @media only screen and ((max-width: 1025px) or (orientation: portrait)) {
-	.main-wrapper {
-		display: block;
-	}
 
-	.main-sidebar {
-		width: 0%;
+	.left-sidebar {
+		width: 0px;
 		visibility: hidden;
 	}
 
 	.top-sidebar {
-		margin-top: 2em;
+		margin-top: 3vh;
 		visibility: visible;
 		width: 90%;
+		height: fit-content;
+		border-bottom: 0.5vh solid black;
 	}
 
 	.main {
-		width: 90%
+		width: 90%;
+
+		h2 { font-size: 3vh; }
+		p { font-size: 2vh; }
 	}
 
-	div.gallery-image {
+	.gallery-image {
 		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		float: inherit;
 	}
 
 	.logo {
-		width: 6em;
+		width: 16vh;
 		margin-right: auto;
 		background-color: black;
 	}

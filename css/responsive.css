@@ -1,3 +1,11 @@
+@media only screen and (orientation: portrait) {
+
+	.main {
+		font-size: 2em;
+	}
+
+}
+
 @media only screen and ((max-width: 1025px) or (orientation: portrait)) {
 
 	.left-sidebar {
@@ -6,31 +14,58 @@
 	}
 
 	.top-sidebar {
-		margin-top: 3vh;
+		margin-top: 5vw;
 		visibility: visible;
 		width: 90%;
 		height: fit-content;
-		border-bottom: 0.5vh solid black;
+		border-bottom: 0.6em solid black;
+
+		ul {
+		}
+	}
+
+	.desktop-only {
+		width: 0px;
+		height: 0px;
+		visibility: hidden;
+		overflow: hidden;
+	}
+	.mobile-only {
+		width: auto;
+		height: auto;
+		visibility: visible;
+		overflow: auto;
 	}
 
 	.main {
 		width: 90%;
-
-		h2 { font-size: 3vh; }
-		p { font-size: 2vh; }
 	}
 
 	.gallery-image {
 		width: 90%;
 		margin-left: auto;
 		margin-right: auto;
+		margin-bottom: 2.0em;
+		margin-top: 1.0em;
 		float: inherit;
 	}
 
 	.logo {
-		width: 16vh;
+		padding-right: 2em;
 		margin-right: auto;
-		background-color: black;
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-bottom: 0;
+		width: auto;
+		font-size: 4em;
 	}
 
+
+	.text-left-wrapper{
+		width: 100%;
+	}
+
+	.image-right-wrapper{
+		width: 100%;
+	}
 }

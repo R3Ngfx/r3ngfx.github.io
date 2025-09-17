@@ -27,3 +27,4 @@ for t in os.listdir("templates"):
 substitute_in_directory(".")
 substitute_in_directory("blog")
 substitute_in_directory("works")
+substitute_in_directory("es")

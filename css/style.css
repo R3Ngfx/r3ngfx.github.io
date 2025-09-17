@@ -1,6 +1,9 @@
 body { background-color: #FFFFFF;}
 ::selection { background-color:#FFC100; color:#000; text-decoration:none }
 
+mark { background-color:#FFC100; color:#000; }
+mark::selection { background-color:#000; color:#ffc100; }
+
 @font-face { font-family: Geist; src: url('../fonts/Geist/Geist-Regular.ttf'); }
 @font-face { font-family: Geist; font-weight: bold; src: url('../fonts/Geist/Geist-Bold.ttf'); }
 
@@ -61,6 +64,15 @@ h2 {
 	padding-bottom: 0px;
 	margin-bottom: 8px;
 	border-bottom: solid 0.2em #000000;
+}
+
+blockquote {
+	border-left: 10px solid #000000;
+	padding-left: 10px;
+}
+
+i {
+	color: #888888;
 }
 
 .centered-img {
@@ -125,6 +137,8 @@ code {
 	justify-content: space-between;
 }
 
+a.silent-link:before {content:""}
+a.silent-link:after {content:""}
 .silent-link a:before{content:""}
 .silent-link a:after{content:""}
 
@@ -280,6 +294,14 @@ code {
 	overflow: auto;
 }
 
+.gallery-picture {
+	margin: 10px;
+	border: 0.2em solid #000;
+	float: left;
+	width: 45%;
+
+}
+
 .gallery-image {
 	margin: 6px;
 	border: 0.2em solid #000;
@@ -334,10 +356,30 @@ code {
 	background-position: 0px, 0px, 14vh, 11vh;
 }
 
+.gallery-description {
+	position: absolute;
+	visibility: hidden;
+	bottom: 0px;
+	background: #000000AA;
+	width: 100%;
+	font-size: medium;
+}
+
+.gallery-picture:hover .container .gallery-description {
+	visibility: visible;
+}
+
+.gallery-description p{
+	text-align: justify;
+	vertical-align: text-bottom;
+	margin: 10px;
+	color: white;
+	font-weight: normal;
+}
+
 div.container {
 	position: relative;
 	vertical-align: top;
-	font-size:0;
-	display: block;
+	display: inline-block;
+	font-size: 0;
 }
-

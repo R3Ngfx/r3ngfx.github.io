@@ -4,6 +4,15 @@
 		font-size: 2em;
 	}
 
+	h2 {
+		border-bottom: solid 0.15em #000000;
+		font-size: 2em;
+	}
+
+	h3 {
+		font-size: 2em;
+	}
+
 }
 
 @media only screen and ((max-width: 1025px) or (orientation: portrait)) {
@@ -50,6 +59,15 @@
 		float: inherit;
 	}
 
+	.gallery-picture {
+		width: 90% !important;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 2.0em;
+		margin-top: 1.0em;
+		float: inherit;
+	}
+
 	.logo {
 		padding-right: 2em;
 		margin-right: auto;
@@ -68,4 +86,16 @@
 	.image-right-wrapper{
 		width: 100%;
 	}
+
+	.gallery-picture .container .gallery-description {
+		visibility: visible;
+		p {
+			font-size: 2em;
+		}
+	}
+
+	.gallery-image img {
+		filter: grayscale(0%);
+	}
+
 }

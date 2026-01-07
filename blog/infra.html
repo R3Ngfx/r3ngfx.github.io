@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<title>R3N - Infra</title>
+<!-- import start -->
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="/css/style.css" media="screen"/>
+		<link rel="stylesheet" type="text/css" href="/css/responsive.css" media="screen"/>
+		<link rel="icon" type="image/x-icon" href="/assets/images/r3n.ico">
+<!-- import end -->
+
+		<link rel="stylesheet" href="../highlight/styles/mono-blue.min.css">
+		<script src="../highlight/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
+
+	</head>
+
+	<body>
+
+<!-- navigation start -->
+		<div class="top-sidebar">
+			<div class="logo" onclick="location.href='/';"> R3N </div>
+			<a href="/about.html"> About </a>
+			<a href="/works.html"> Works </a>
+			<!-- <a href="/blog.html"> Blog </a> -->
+		</div>
+		<div class="left-sidebar">
+			<div class="logo" onclick="location.href='/';"> R3N </div>
+			<ul>
+				<li> <a href="/about.html"> About </a> </li>
+				<li> <a href="/works.html"> Works </a> </li>
+				<li> <a href="/services.html"> Services </a> </li>
+				<!-- <li> <a href="/blog.html"> Blog </a> </li> -->
+			</ul>
+		</div>
+<!-- navigation end -->
+
+		<div class="main">
+
+			<div class="title"><p>Infra: Offline rendering for realtime shaders</p></div>
+			<p class="date">[2024/12/XX]</p>
+
+			<div class="content-row">
+
+				<p>
+					Last week I made the source code for <a href="https://github.com/R3Ngfx/infra">Infra</a>, my custom GLSL shader renderer and exporter, open source and freely available.
+					I originally built the program to address a very specific use case that I needed at the moment: Rendering the output of GLSL shaders to arbitrary resolutions and framerates.
+					In this blog post I want to explain more in depth what the program does, why I built it and what you can do with it, along with a short explanation of its usage.
+					Therefore the contents of this post are separated into the following segments:
+				</p>
+				<ul>
+					<li> <a href="#01"> An Offline GLSL Renderer </a> </li>
+					<li> <a href="#02"> The Use Case </a> </li>
+					<li> <a href="#03"> Using Infra </a> </li>
+					<li> <a href="#04"> Extra: Implementation </a> </li>
+				</ul>
+
+				<h2 id="02">The Use Case</h2>
+				<p>
+				[Introduction, why I created it ]
+				So, who is it for actually? Well, in truth, as it may be obvious, it is for me, mostly, but [].
+				I think shader programming is a really fun and interesting way of creating visual art, so I will continue to promote [], and when I do, this program is another reason to motivate people
+				</p>
+				<h2 id="01">An Offline GLSL Renderer</h2>
+				<p>
+				Infra is a tool with which you can write your own fragment shaders, load them into the program and export either an image or a video sequence of the output of the shader with an arbitrary resolution and framerate.
+				Admittedly, this is not a good way to summarize what the program does or what it is for for those who are not familiarized with computer graphics terminology, [so I'm now going to give a small introduction to the concepts in order to understand].
+				[Talk about what you can do with shaders: Digital art, music videos, VJ loops, motion graphics, 3D textures]
+				[History on why I made it, there are no good solutions out there for this specific use case]
+				In short, shader code goes in, image or video comes out.
+				</p>
+				<h2 id="03">Using Infra</h2>
+				<p>
+				[Example on how I use infra for different things]
+				</p>
+				<h2 id="04">Extra: Implementation</h2>
+				<p>
+				[Talk about how it was built. C language, libraries, thanks to Samuel for the windows binaries, etc.]
+				</p>
+			</div>
+
+		</div>
+
+	</body>
+</html>

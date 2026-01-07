@@ -110,6 +110,18 @@ code {
 	a:before { content:"«" }
 	a:after { content:"»" }
 
+	i {
+		a {
+			color: #888888;
+		}
+
+		blockquote {
+			border-left: 10px solid #888888;
+			padding-left: 10px;
+		}
+
+	}
+
 	p {
 		font-size: 1em;
 		text-align: justify;
